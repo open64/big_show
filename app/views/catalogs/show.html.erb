@@ -1,0 +1,5 @@
+<% @products.each do |product| %>
+    <%= link_to image_tag(product.image) || 'blank-product', catalog_product_path(@catalog[:id], product[:id]) %>
+    <%= link_to product[:name], catalog_product_path(@catalog[:id], product[:id]) %><br>
+    <%= link_to 'додати до корзини', line_items_create_path(product_id: product[:id]), method: 'post' %><br>
+<% end %>

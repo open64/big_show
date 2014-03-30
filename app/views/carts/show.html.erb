@@ -1,0 +1,9 @@
+<% @cart.each do |item| %>
+    <% product = find_product item %>
+    <%= product[:name] %><br>
+    <%= item[:quantity] %> x
+    <%= product[:price] %>
+    <%= link_to '+', line_items_create_path(product_id: item[:product_id]), method: 'post' %>
+    <%= link_to '-', line_items_destroy_path(product_id: item[:product_id]), method: 'delete' %>
+    <br><br>
+<% end %>

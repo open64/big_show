@@ -1,0 +1,6 @@
+<%= image_tag @product.image %>
+<%= @product.name %>
+<%= @product.description %>
+<%= @product.quantity %>
+<%= @product.price %><br>
+<%= link_to 'додати до корзини', line_items_create_path(product_id: @product[:id]), method: 'post' %><br>
