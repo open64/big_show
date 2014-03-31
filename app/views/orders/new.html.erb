@@ -1,0 +1,23 @@
+<%= form_for(@order) do |order_form| %>
+    <div class="form-group">
+        <%= order_form.label :first_name %><br>
+        <%= order_form.text_field :first_name, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+        <%= order_form.label :last_name %><br>
+        <%= order_form.text_field :last_name, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+        <%= order_form.label :email %><br>
+        <%= order_form.text_field :email, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+        <%= order_form.label :phone %><br>
+        <%= order_form.text_field :phone, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+        <%= order_form.label :address %><br>
+        <%= order_form.text_field :address, class: 'form-control' %>
+    </div>
+    <%= order_form.submit 'Підтвердити' , class: 'btn btn-large btn-primary' %>
+<% end %>

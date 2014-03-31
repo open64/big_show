@@ -7,3 +7,8 @@
     <%= link_to '-', line_items_destroy_path(product_id: item[:product_id]), method: 'delete' %>
     <br><br>
 <% end %>
+<% if session[:cart].any? %>
+    <%= link_to 'Оформити заказ', orders_new_path %>
+<% else %>
+    <p>Корзина пуста</p>
+<% end %>

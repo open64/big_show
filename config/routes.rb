@@ -1,4 +1,6 @@
 BigShop::Application.routes.draw do
+  get "orders/new"
+  post "orders" => 'orders#create'
   post "line_items/create"
   delete "line_items/destroy"
   get "carts/show"
