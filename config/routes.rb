@@ -1,11 +1,13 @@
 BigShop::Application.routes.draw do
-  get "orders/new"
-  post "orders" => 'orders#create'
-  post "line_items/create"
-  delete "line_items/destroy"
-  get "carts/show"
-  post "cart/create"
-  delete "cart/destroy"
+  post 'searches' => 'searches#create'
+  get 'searches/new'
+  get 'orders/new'
+  post 'orders' => 'orders#create'
+  post 'line_items/create'
+  delete 'line_items/destroy'
+  get 'carts/show'
+  post 'cart/create'
+  delete 'cart/destroy'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :catalogs do

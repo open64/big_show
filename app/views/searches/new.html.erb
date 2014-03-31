@@ -1,0 +1,7 @@
+<%= form_for @search do |find| %>
+    <div class="form-group">
+        <%= find.label 'Знайти товар' %>
+        <%= find.text_field :val, class: 'form-control' %>
+    </div>
+    <%= find.submit 'Знайти', class: 'btn btn-large btn-primary' %>
+<% end %>
